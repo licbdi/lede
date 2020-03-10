@@ -100,7 +100,7 @@ jobs:
           cat >> .config <<EOF
           CONFIG_TARGET_ramips=y
           CONFIG_TARGET_ramips_mt7620=y
-          CONFIG_TARGET_ramips_mt7620_DEVICE_lenovo_newifi-y1s=y
+          CONFIG_TARGET_ramips_mt7620_DEVICE_lenovo_newifi-y1=y 
           EOF
           		  
           # 固件压缩:
@@ -140,17 +140,17 @@ jobs:
           		  
           # 常用LuCI插件选择:
           cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-app-frpc=y
+          CONFIG_PACKAGE_luci-app-frpc=n
           CONFIG_PACKAGE_luci-app-minidlna=y
           CONFIG_PACKAGE_luci-app-mjpg-streamer=y
           CONFIG_PACKAGE_luci-app-ssr-plus=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=n
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=n
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=n
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=n
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_DNS2SOCKS=y
           # CONFIG_PACKAGE_luci-app-dnspod=y
           # CONFIG_PACKAGE_luci-app-adbyby-plus=y
@@ -175,6 +175,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          CONFIG_PACKAGE_luci-app-zerotier=n
           CONFIG_PACKAGE_luci-app-usb-printer=y
           EOF
           		  
